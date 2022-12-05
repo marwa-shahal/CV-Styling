@@ -1,0 +1,149 @@
+body{
+    margin:100px 150px;
+}
+hgroup h1{
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+hgroup h2, #about h3, #contact h3, #contact dt, .contact-skype{
+    display: none;
+}
+#about p{
+    color:gray;
+    font-style: italic;
+    width:70%;
+    font-size: 24px;
+    margin-bottom: 10%;
+}
+header{
+    position:relative;
+}
+figure img{
+    position:absolute;
+    transform: rotate(-45deg);
+    right:5%;
+    width:110px;
+    height:110px;
+}
+.content section:not(:first-child){
+    display:grid;
+    grid-template-columns: 140px auto ;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+.content section h3 {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    font-style: italic;
+    min-width:fit-content;
+    margin-right:20px;
+    border-right:1px solid black;
+    padding-right: 0;
+  }
+
+h4{
+    color:#008080;
+}
+/* styling the skills */
+.skills-primary, .skills-secondary {
+    display: flex;
+    color: white;
+    width: 70%;
+    gap: 8px;
+}
+.skill{
+    background-color: #008080;
+    width: 30%;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-primary{
+    font-size: 100%;
+}
+
+.skills-secondary{
+    font-size: 60%;
+}
+
+.skill[data-skill="1"]::after {
+    content: "★";
+}
+
+.skill[data-skill="3"]::after {
+    content: "★★";
+
+}
+
+.skill[data-skill="5"]::after {
+    content: "★★★";
+
+}
+
+.skill[data-skill="7"]::after {
+    content: "★★★★";
+}
+
+.skill[data-skill="9"]::after {
+    content: "★★★★★";
+}
+
+/* styling experience  */
+.experience .experience-institution{
+    display:none;
+}
+.experience{
+    display:grid;
+    grid-template-rows:auto auto;
+    grid-template-columns: auto auto ;
+}
+
+.experience p {
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+.experience-details{
+    text-align: right;
+    margin:20px 0;
+    color:gray;
+}
+
+.experience-details .experience-date-separator {
+    color: #008080;
+}
+
+/* styling contact */
+#contact{
+    display:block;
+}
+.contacts{
+    display: flex;
+    justify-content:center ;
+ 
+   
+}
+.contact-email a::after{
+   background-image: url("../images/email.png");
+}
+.contact-phone a::after{
+    background-image: url("../images/phone.png");
+ }
+.contact-github a::after{
+    background-image: url("../images/github.png");
+
+ }
+ .contact-facebook a::after{
+    background-image: url("../images/facebook.png");
+ }
+
+ .contact a::after{
+    content:"";
+    display: inline-block;
+    background-size: 80px 80px;
+    width: 100px; 
+    height: 100px;
+    
+}
