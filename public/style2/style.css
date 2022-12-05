@@ -1,9 +1,10 @@
 body{
-    margin:100px 150px;
+    margin:5% 10%;
 }
 hgroup h1{
     padding-bottom: 20px;
     border-bottom: 1px solid gray;
+    width: auto;
 }
 hgroup h2, #about h3, #contact h3, #contact dt, .contact-skype{
     display: none;
@@ -12,16 +13,18 @@ hgroup h2, #about h3, #contact h3, #contact dt, .contact-skype{
     color:gray;
     font-style: italic;
     width:70%;
-    font-size: 24px;
-    margin-bottom: 10%;
+    font-size: 20px;
+    margin-bottom: 5%;
+    width:60%;
 }
 header{
     position:relative;
 }
 figure img{
     position:absolute;
-    transform: rotate(-45deg);
+    transform: rotate(-15deg);
     right:5%;
+    top:50px;
     width:110px;
     height:110px;
 }
@@ -122,8 +125,7 @@ h4{
 .contacts{
     display: flex;
     justify-content:center ;
- 
-   
+    flex-wrap: wrap;
 }
 .contact-email a::after{
    background-image: url("../images/email.png");
@@ -133,7 +135,6 @@ h4{
  }
 .contact-github a::after{
     background-image: url("../images/github.png");
-
  }
  .contact-facebook a::after{
     background-image: url("../images/facebook.png");
@@ -143,7 +144,37 @@ h4{
     content:"";
     display: inline-block;
     background-size: 80px 80px;
-    width: 100px; 
-    height: 100px;
+    width: 80px; 
+    height: 80px;
+}
+.contact a{
+    font-size: 0px;
+}
+
+@media only screen and (max-width:990px) {
+    .content section:not(:first-child){
+        display:grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto;
+        row-gap: 10px;
+    }
+    .content section h3 {
+        grid-column: 1;
+        grid-row: 1;
+        border-right: 0px;
+        border-bottom: 1px solid black;
+      }
     
+    #about p{
+        font-size: 14px;
+        width:60%
+    }
+    figure img{
+        display: none;
+    }
+    .contacts{
+        justify-content:flex-start ;
+    }
+
+
 }
