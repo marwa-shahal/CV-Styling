@@ -1,0 +1,220 @@
+/* styling header */
+body{
+    position: relative;
+}
+header div {
+    background-color: gray;
+    display: flex; 
+}
+
+header hgroup {
+    margin-left: 100px;
+    margin-top: 20px;
+    color: red;
+}
+
+/* styling content */
+.content {
+    overflow: hidden;
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+#about, #competencies,#experiences,#education{
+    flex: 50%;
+} 
+
+#hobbies{
+width:50%;
+}
+
+
+/* styling contact info */
+#contact>h3 {
+    display: none;
+}
+#contact{
+    position: absolute;
+    top:0;
+    right:0;
+    width:50%;
+    margin-top:15px;
+    background: black;
+    width: 50%;
+}
+.contact{
+    display:flex;
+    margin: 0px;    
+
+}
+.contact dt{
+    width:150px;
+    background: red;
+    color: white;
+    padding: 2px 5px;
+    margin: 0;
+    
+}
+.contact dd{
+    width: calc(100%-110px);
+    padding: 2px 5px;
+    margin: 0;
+}
+.contact dd a {
+    text-decoration: none;
+    color: red
+}
+
+/* styling h3 */
+h3 {
+    border-bottom: 1px solid gray;
+}
+
+h3::before {
+    display: inline-block;
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    background: red;
+    border-radius: 50%;
+}
+
+p {
+    padding-right: 15px
+}
+
+/* styline skills */
+.skills-primary::before {
+    content: "Main"
+}
+
+.skills-secondary::before {
+    content: "Other"
+}
+
+.skill {
+    background-color: lightgray;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px 0px;
+}
+
+.skill span {
+    display: block;
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.skills-secondary .skill span{
+    opacity:50%;
+}
+
+[data-skill="9"] span {
+    width: 90%;
+}
+
+[data-skill="7"] span {
+    width: 70%;
+}
+
+[data-skill="5"] span {
+    width: 50%;
+}
+
+[data-skill="3"] span {
+    width: 30%;
+}
+
+[data-skill="2"] span {
+    width: 30%;
+}
+
+[data-skill="1"] span {
+    width: 10%;
+}
+
+/* experience */
+.experience h4 {
+    margin-bottom: 0;
+}
+
+.experience-type {
+    color: red;
+
+}
+
+.experience-institution {
+    color: red;
+    font-weight: lighter;
+}
+
+.experience-institution::before {
+    content: "@"
+}
+
+.experience-details {
+    color: gray;
+    margin-left: 10px;
+}
+
+.experience-details::before {
+    content: "In"
+}
+
+.experience-date::before {
+    content: "on"
+}
+
+.experience-date-separator {
+    color: red;
+}
+
+@media only screen and (max-width: 993px){
+    .content {
+        display: block;
+        margin:50px 50px;
+    }
+    #contact>h3 {
+        display: block;
+    }
+
+    #contact{
+        position: relative;
+        width:100%;
+    }
+    .contact dt{
+        margin: 0;
+    }
+    .contact dd{
+        background: white;
+    }
+
+    header div {
+        display: block;
+        position: relative;
+        padding: 20px;
+    }
+    figure{
+        margin-left: 120px;
+    }
+    header hgroup {
+        margin-left: 100px;
+        margin-top:0;
+        color: red;
+    }
+    h1,h2{
+        margin-top:0px;
+    }
+    #contact{
+        background-color: white;
+    }
+    
+}
+
+
