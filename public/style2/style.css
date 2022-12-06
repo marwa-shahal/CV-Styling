@@ -162,6 +162,7 @@ h4{
         grid-column: 1;
         grid-row: 1;
         border-right: 0px;
+        width:fit-content;
         border-bottom: 1px solid black;
       }
     
